@@ -1,0 +1,51 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 31-mar-2017, 9.43.51
+    Author     : tss
+*/
+
+#header{
+ width: 800px;
+ height: 70px;
+ background-color: #66ffff;
+ position: absolute;
+ left: 50%;
+ margin-left: -400px;
+}
+
+#logreg {
+    
+    position: absolute;
+    right: 5px;
+    top: 38%
+}
+
+
+/*----inizio main div----*/
+
+#maindiv{
+    width: 800px;
+    height: 400px;
+    background-color: #b9fdfd;
+    position: absolute;
+    
+    
+    top: 90px;
+    left: 50%;
+    margin-left: -400px;
+}
+
+#testo {
+    width: 50%;
+    font-size: small
+}
+
+/*--- fpoooter ---*/
+
+#footer{
+    
+}
