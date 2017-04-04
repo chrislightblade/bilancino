@@ -29,7 +29,9 @@ import javax.persistence.Table;
     @NamedQuery(name = Utenti.FIND_UTENTE_BY_USERNAME , 
             query = "select c from Utenti c WHERE c.username = :usr") , 
     @NamedQuery(name = Utenti.FIND_UTENTE_BY_USERNAME_PSW , 
-            query = "select c from Utenti c where c.username = :usr and c.password = :psw")
+            query = "select c from Utenti c where c.username = :usr and c.password = :psw"),
+    @NamedQuery(name = Utenti.FIND_UTENTE_BY_EMAIL , 
+            query = "select c from Utenti c where c.email = :email")
         
         
 })
@@ -48,6 +50,7 @@ public class Utenti implements Serializable{
     public static final String FIND_ALL_UTENTI = "Utenti.findAll";
     public static final String FIND_UTENTE_BY_USERNAME = "Utenti.findByUser";
     public static final String FIND_UTENTE_BY_USERNAME_PSW = "Utenti.findByUserPsw";
+    public static final String FIND_UTENTE_BY_EMAIL = "Utenti.findByEmail";
     
     
     //Gli indico che questa è la mia chiave primaria

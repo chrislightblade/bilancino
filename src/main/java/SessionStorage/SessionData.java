@@ -18,6 +18,16 @@ public class SessionData implements Serializable{
     
     
     private Utenti utenteLogged;
+    
+    /*private boolean logged = false;
+
+    public boolean isLogged() {
+        return logged;
+    }
+
+    public void setLogged(boolean logged) {
+        this.logged = logged;
+    }*/
 
     public Utenti getUtenteLogged() {
         return utenteLogged;

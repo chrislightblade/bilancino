@@ -13,29 +13,18 @@
     </head>
     <body>
         
-       <table style="margin: 0 auto">
-            
-            <th>Categoria</th>
-            <th>Importo</th>
-            <th>Data Creazione</th>
-            <th>Descrizione</th>
-            
-            <!--  
-            
-                Ci permette di visualizzare le transazioni del tipo.
-            
-            -->
+       
             <c:forEach items="${speseSrv.findSpeseById()}" var="spese">
               
-            <tr>
+            
                 <td>   <c:out value="${spese.categoria.id}"/>  </td>
                 <td>   <c:out value="${spese.importo}"/>  </td>
                 <td>   <c:out value="${spese.dataCreazione}"/>  </td>
                 <td>   <c:out value="${spese.descrizione}"/>  </td>
                 
-            </tr>
+            
             </c:forEach>
-        </table>
+        
         
         
         

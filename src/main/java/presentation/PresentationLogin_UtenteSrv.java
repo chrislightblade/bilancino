@@ -43,22 +43,29 @@ public class PresentationLogin_UtenteSrv extends HttpServlet{
         super.destroy(); 
         System.out.println("destroy()....");
     }
-
+    
+    
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
        
          //vado a leggere quello che ha inserito l'utente.
          
-       if(utenteLogged == null){  
+       if(utenteLogged.getUtenteLogged() == null/* || utenteLogged.isLogged() == false*/){  
          
        String nu = req.getParameter("nome_utente");
        
        String pass = req.getParameter("password");
        
+       
+       
        if(nu != null && pass != null){
            
        Utenti utenteL = utenteservice.findByUsrPsw( nu , pass);
        utenteLogged.setUtenteLogged(utenteL);
+       //utenteLogged.setLogged(true);
+       
+           System.out.println("Setting utente = " + utenteLogged.getUtenteLogged() /*+ " - " + utenteLogged.isLogged()*/);
+       
        }else{
            System.out.println("Campo/i non compilati");
            
@@ -68,11 +75,17 @@ public class PresentationLogin_UtenteSrv extends HttpServlet{
        
         
        resp.sendRedirect("PP_Utente_Loggato.html");
+       } else { 
+           
+           //utenteLogged.setLogged(false);
+           utenteLogged.setUtenteLogged(null);
+           
+           System.out.println("Fine sessione utente " + utenteLogged.getUtenteLogged() /*+ " Sessione " + utenteLogged.isLogged()*/);
+           
+           resp.sendRedirect("index.html");          
+           
        }
-    }
-    
-    
-    
-    
+    } 
+
     
 }
