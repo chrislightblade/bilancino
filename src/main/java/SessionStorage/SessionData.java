@@ -39,6 +39,14 @@ public class SessionData implements Serializable{
     public void setUtenteLogged(Utenti utenteLogged) {
         this.utenteLogged = utenteLogged;
     }
+
+    public Categorie getCategoriaScelta() {
+        return categoriaScelta;
+    }
+
+    public void setCategoriaScelta(Categorie categoriaScelta) {
+        this.categoriaScelta = categoriaScelta;
+    }
     
     
     

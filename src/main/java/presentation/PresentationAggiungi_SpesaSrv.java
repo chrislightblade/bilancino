@@ -69,6 +69,18 @@ public class PresentationAggiungi_SpesaSrv extends HttpServlet{
         speseservice.save(s);
         resp.sendRedirect("PP_Utente_Loggato.html");
     }
+
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+         
+        Utenti u = utenteLogged.getUtenteLogged();
+        Categorie c = new Categorie();
+        c.setId(req.getParameter("categoria"));
+        c.setUtente(u);
+        utenteLogged.setCategoriaScelta(c);
+    }
+    
+    
     
     
     

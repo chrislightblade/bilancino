@@ -35,9 +35,14 @@ import javax.persistence.TemporalType;
                  query = "select c from Spese c WHERE c.utente.id = :id") , 
     @NamedQuery (name = Spese.FIND_ALL_SPESE_7_GG , 
                  query = "SELECT c FROM Spese c WHERE c.dataCreazione BETWEEN :dat2 AND :dat") ,
-    @NamedQuery (name = Spese.FIND_ALL_SPESE_31_GG , 
-                 query = "SELECT c FROM Spese c WHERE c.dataCreazione BETWEEN :dat2 AND :dat") 
-    
+    @NamedQuery (name = Spese.FIND_ALL_SPESE_1_MESE , 
+                 query = "SELECT c FROM Spese c WHERE c.dataCreazione BETWEEN :dat2 AND :dat") ,
+    @NamedQuery (name = Spese.FIND_ALL_BY_CATEGORY , 
+                 query = "SELECT c FROM Spese c WHERE c.categoria = :cat") ,
+    @NamedQuery (name = Spese.FIND_ALL_BY_CATEGORY_AND_7GG , 
+                 query = "SELECT c FROM Spese c WHERE c.categoria = :cat AND c.dataCreazione BETWEEN :dat2 AND :dat") ,
+    @NamedQuery (name = Spese.FIND_ALL_BY_CATEGORY_AND_1_MESE , 
+                 query = "SELECT c FROM Spese c WHERE c.categoria = :cat AND c.dataCreazione BETWEEN :dat2 AND :dat")
 })
 
 
@@ -51,7 +56,10 @@ public class Spese implements Serializable {
     public static final String FIND_ALL_SPESE_BY_ID = "Spese.findById";
     public static final String FIND_ALL_SPESE = "Spese.findAll";
     public static final String FIND_ALL_SPESE_7_GG = "Spese.find7Gg";
-    public static final String FIND_ALL_SPESE_31_GG = "Spese.find31Gg";
+    public static final String FIND_ALL_SPESE_1_MESE = "Spese.find1Mese";
+    public static final String FIND_ALL_BY_CATEGORY = "Spese.findByCategoria";
+    public static final String FIND_ALL_BY_CATEGORY_AND_7GG = "Spese.findByCategoria&7Gg";
+    public static final String FIND_ALL_BY_CATEGORY_AND_1_MESE = "Spese.findByCategoria&1Mese";
     //public static final String FIND_ALL_SPESE_BY_USER = "Spese.findByUser";
     
     

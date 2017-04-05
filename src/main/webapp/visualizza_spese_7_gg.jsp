@@ -11,6 +11,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Elenco Transazioni Utente</title>
     </head>
+    <input type="submit" value="Invio" name="pulsanteInvio" style="width: 100px ; height: 25px ; font-size:medium"> 
     <body>
         
        <table style="margin: 0 auto">

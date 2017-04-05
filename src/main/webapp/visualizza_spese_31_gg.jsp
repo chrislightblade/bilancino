@@ -25,7 +25,7 @@
                 Ci permette di visualizzare le transazioni del tipo.
             
             -->
-            <c:forEach items="${speseSrv.findSpese31Gg()}" var="spese">
+            <c:forEach items="${speseSrv.findSpese1Mese()}" var="spese">
               
             <tr>
                 <td>   <c:out value="${spese.categoria.id}"/>  </td>

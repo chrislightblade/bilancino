@@ -6,6 +6,7 @@
 package service;
 
 import SessionStorage.SessionData;
+import entity.Categorie;
 import entity.FunzioniData;
 import entity.Spese;
 import java.time.LocalDate;
@@ -55,18 +56,15 @@ public class SpeseService {
     }
 
     public List<Spese> findSpese7Gg( /*Long id*/) {
-
-        Long t = utenteLogged.getUtenteLogged().getId();
+        
         Date dataoggi = new Date();
        
-        LocalDate oggi = LocalDate.now();
-        
-        Period p = Period.ofMonths(1);
-        
+        LocalDate oggi = LocalDate.now();        
+        Period p = Period.ofDays(7);        
         LocalDate minus = oggi.minus(p);
         
-        System.out.println("La data menu 31 giorni è: " + minus);
-        System.out.println("La data menu 31 giorni è: " + oggi);
+        System.out.println("La data menu 7 giorni è: " + minus);
+        
         
         return em.createNamedQuery(Spese.FIND_ALL_SPESE_7_GG, Spese.class).
                 setParameter("dat", dataoggi).
@@ -74,15 +72,12 @@ public class SpeseService {
                 getResultList();
     }
     
-    public List<Spese> findSpese31Gg( /*Long id*/) {
+    public List<Spese> findSpese1Mese( /*Long id*/) {
 
-        Long t = utenteLogged.getUtenteLogged().getId();
         Date dataoggi = new Date();
        
-        LocalDate oggi = LocalDate.now();
-        
-        Period p = Period.ofMonths(1);
-        
+        LocalDate oggi = LocalDate.now();        
+        Period p = Period.ofMonths(1);        
         LocalDate minus = oggi.minus(p);
         
         System.out.println("La data menu 31 giorni è: " + minus);
@@ -91,9 +86,47 @@ public class SpeseService {
         cal.add(Calendar.DATE, -31);
         Date dateBefore31Days = cal.getTime();*/
         
-        return em.createNamedQuery(Spese.FIND_ALL_SPESE_31_GG, Spese.class).
+        return em.createNamedQuery(Spese.FIND_ALL_SPESE_1_MESE, Spese.class).
                 setParameter("dat", dataoggi).
                 setParameter("dat2", FunzioniData.converti(minus)).
+                getResultList();
+    }
+    
+    public List<Spese> findSpeseByCategoriaAnd7Gg() {
+        
+        Categorie c = utenteLogged.getCategoriaScelta();
+
+        Date dataoggi = new Date(); 
+        
+        LocalDate oggi = LocalDate.now();        
+        Period p = Period.ofDays(7);        
+        LocalDate minus = oggi.minus(p);
+        
+        System.out.println("La data menu 31 giorni è: " + minus);        
+        
+        return em.createNamedQuery(Spese.FIND_ALL_BY_CATEGORY_AND_7GG, Spese.class).
+                setParameter("dat", dataoggi).
+                setParameter("dat2", FunzioniData.converti(minus)).
+                setParameter("cat", c).
+                getResultList();
+    }
+    
+    public List<Spese> findSpeseByCategoriaAnd1Mese() {
+        
+        Categorie c = utenteLogged.getCategoriaScelta();
+
+        Date dataoggi = new Date(); 
+        
+        LocalDate oggi = LocalDate.now();        
+        Period p = Period.ofMonths(1);        
+        LocalDate minus = oggi.minus(p);
+        
+        System.out.println("La data menu 31 giorni è: " + minus);        
+        
+        return em.createNamedQuery(Spese.FIND_ALL_BY_CATEGORY_AND_1_MESE, Spese.class).
+                setParameter("dat", dataoggi).
+                setParameter("dat2", FunzioniData.converti(minus)).
+                setParameter("cat", c).
                 getResultList();
     }
 
