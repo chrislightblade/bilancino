@@ -4,9 +4,10 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
 /* 
-    Created on : 31-mar-2017, 9.43.51
+    Created on : 5-apr-2017, 9.01.30
     Author     : tss
 */
+
 
 #header{
  width: 800px;
@@ -18,47 +19,17 @@ and open the template in the editor.
  border-radius: 20px  20px 0px 0px;
 }
 
-#pepeL{
-    position: absolute;
-    left: 30px;
-    top: 5px;
-    background-repeat: no-repeat;
-    
-    width: 60px;
-    height: 60px;
-    
-}
-
-#pepeR{
-    position: absolute;
-    right: 30px;
-    top: 5px;
-    background-repeat: no-repeat;
-    
-    width: 60px;
-    height: 60px;
-    transform: rotateY(180deg)
-    
-}
-/*#logreg {
-    
-    position: absolute;
-    right: 5px;
-    top: 38%
-}*/
 
 #titolo{
     
     font-size: larger;
     font-style: italic;
-    width: 400px;
+    width: 390px;
     height: 20px;
     margin: 0 auto;
     margin-top: 24px;
 }
 
-
-/*----inizio main div----*/
 
 #maindiv{
     width: 800px;
@@ -71,55 +42,56 @@ and open the template in the editor.
     margin-left: -400px;
 }
 
+#title{
+    width: 400px;
+    position: absolute;
+    left: 50%;
+    font-size: 20px;
+    margin-left: -128px;
+    margin-top: 15px;
+}
+
+
+#container{
+    text-align: center
+}
+
 #testo {
     margin-top: 61px;
-    margin-left: 30px;
     position: absolute;
     border: 1px solid black;
     border-radius: 10px 10px 10px 10px;
-    width: 390px;
+    width: 270px;
     font-size: small;
     padding: 5px;
-}
-#title {
-    font-size: large;
-    font-style: italic
+    left: 30%;
+    margin-left: -200px;
 }
 
-#login{
+
+#testo2{
+    margin-top: 61px;
     position: absolute;
     border: 1px solid black;
-    
-    width: 200px;
-    height: 75px;
-    background-color: appworkspace;
-    border-radius: 20px 20px 20px 20px;
-    text-align: center;
-    line-height: 75px;
-        color: inherit;
-    right: 90px;
-    text-decoration:none;
-    top: 55px;
-    
+    border-radius: 10px 10px 10px 10px;
+    width: 270px;
+    font-size: small;
+    padding: 5px;
+    left: 30%;
+    margin-left: 230px
 }
 
-#registrazione{
-    position: absolute;
-    border: 1px solid black;
-    
-    width: 200px;
-    height: 75px;
-    background-color: appworkspace;
-    border-radius: 20px 20px 20px 20px;
-    text-align: center;
-    line-height: 75px;
-    color: black;
-    right: 90px;
-    text-decoration:none;
-    top: 260px;
+#container2{
+    text-align: center
 }
 
-/*--- fpoooter ---*/
+#CTitle{
+    
+    font-size: 15px
+}
+
+
+
 
 #footer{
     border: 1px solid black;
@@ -138,4 +110,3 @@ and open the template in the editor.
     line-height: 20px;
     margin-left: 30px;
 }
-

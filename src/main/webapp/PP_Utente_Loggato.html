@@ -9,17 +9,74 @@ and open the template in the editor.
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>    
+        <link href="CssFolder/PP_Utente_LoggatoCss.css" rel="stylesheet" type="text/css"/>
+    </head>
     <body>
-        <form  action="utenteLog" method="POST">
-            <input type="submit" value="Log Out" style="float:right">
+
+
+        <div id="header">
+            <div id="titolo">Tutte le tue transazioni a portata di click!</div>
+        </div>
+
+
+
+        <div id="maindiv">
+            <div id="title">Homepage utente loggato</div>
+
+            <div id="testo">
+
+
+                <div id="container">
+                    <a id="CTitle">Lato per aggiunta elementi</a>
+
+                    <br><br>
+                    <input type="button" class="button_active" style="  font-weight: bold ; width: 200px; height: 40px;" 
+                           value="Aggiungi una categoria!" onclick="location.href = 'Inserisci_Categoria.html';" /> 
+                    
+                    <br><br><br>
+                    
+                    <input type="button" class="button_active" style="  font-weight: bold ; width: 200px; height: 40px;" 
+                           value="Aggiungi una spesa!" onclick="location.href = 'Inserimento_Spesa.jsp';" /> 
+                    <br>
+                    
+
+
+
+
+                </div>
+            </div>
+
+            <div id="testo2">
+                <div id="container2">
+                    <a id="CTitle">Lato delle viste delle spese.</a>
+                    <br><br>
+                    
+                    <input type="button" class="button_active" style="  font-weight: bold ; width: 200px; height: 40px;" 
+                           value="Visualizza tutte le spese!" onclick="location.href = 'BilancinoUtente.jsp';" /> 
+                    <br> <br><br>
+                    <input type="button" class="button_active" style="  font-weight: bold ; width: 200px; height: 40px;" 
+                           value="Visualizza spese di 7 gg!" onclick="location.href = 'visualizza_spese_7_gg.jsp';" /> 
+                    
+                    <BR><BR><br>
+                    <input type="button" class="button_active" style="  font-weight: bold ; width: 200px; height: 40px;" 
+                           value="Visualizza spese 31 gg!" onclick="location.href = 'visualizza_spese_31_gg.jsp';" /> 
+
+                </div>
+
+
+            </div>
+            
+            <form  action="utenteLog" method="POST">
+            <input type="submit" value="Log Out" style="position: absolute ; right: 15px; bottom:15px; font-weight: bold">
         </form>
-        <br><br>
-        <a href="Inserimento_Spesa.jsp">Aggiungi Una Spesa</a>
-        <br><br>
-        <a href="Inserisci_Categoria.html">Aggiungi Una Categoria</a>
-        <br><br>
-        <a href="BilancinoUtente.jsp">Visualizza Le Spese</a>
-        
+        </div>
+
+        <div id="footer">
+
+            <a id="left">Sito realizzato da Fabio & Luca presso Ghiglieno Digital (Ivrea)</a>
+
+        </div>
+
+
     </body>
 </html>

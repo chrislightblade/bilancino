@@ -9,37 +9,64 @@ and open the template in the editor.
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="CssFolder/Inserimento_utenteCss.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-       
-        
-        <form  action="utente" method="POST">
-            
-            <div>Inserire Nome Utente</div>
-        
-            <input type ="text" style="width: 120px "   size="10" value="" placeholder="Inserire nome utente" name="nome_utente" >
-        
-        <br>
-        <br>
-        <br>
-         <div>Inserire Password</div>
-        
-         <input type ="password" style="width: 120px "   size="10" value="" placeholder="Inserire password!" name="password" >
-        
-         <br>
-        <br>
-        <br>
-         <div>Inserire email</div>
-        
-         <input type ="text" style="width: 120px "   size="25" value="" placeholder="Inserire email!" name="email" >
-        <br>
-        <br>
-        <br>
-        <input type="submit" value="Invio" name="pulsanteInvio" style="width: 100px ; height: 25px ; font-size:medium"> 
-            
-            
-        </form>
-        
-        
+
+        <div id="header">
+            <div id="titolo">Tutte le tue transazioni a portata di click!</div>
+        </div>
+
+
+
+        <div id="maindiv">
+            <div id="title">Pagina di registrazione al bilancino.</div>
+
+
+
+            <div id="testo">
+
+
+                <div id="container">
+                    <form  action="utente" method="POST">
+
+                        <div >Inserire Nome Utente</div>
+
+                        <input type ="text" style="width: 200px ; text-align: center   "   size="15" value="" placeholder="Inserire nome utente!" name="nome_utente" >
+
+                        <br>
+                        <br>
+                        <br>
+                        <div>Inserire Password</div>
+
+                        <input type ="password" style="width: 200px ; text-align: center  "   size="15" value="" placeholder="Inserire password!" name="password" >
+
+                        <br>
+                        <br>
+                        <br>
+                        <div>Inserire email</div>
+
+                        <input type ="text" style="width: 200px ; text-align: center  "   size="25" value="" placeholder="Inserire email!" name="email" >
+                        <br>
+                        <br>
+                        <br>
+                        <input type="submit" value="Invio" name="pulsanteInvio" style="width: 100px ; height: 25px ; font-size:medium"> 
+
+
+                    </form>
+                </div>
+            </div>
+            <input type="button" class="button_active" style="position: absolute ; bottom: 10px; left: 50% ; margin-left: -81px ; font-weight: bold"  value="Back to the home." onclick="location.href='index.html';" /> 
+
+        </div>
+
+        <div id="footer">
+
+            <a id="left">Sito realizzato da Fabio & Luca presso Ghiglieno Digital (Ivrea)</a>
+
+        </div>
+
+
+
     </body>
 </html>

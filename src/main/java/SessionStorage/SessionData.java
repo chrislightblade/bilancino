@@ -5,6 +5,7 @@
  */
 package SessionStorage;
 
+import entity.Categorie;
 import entity.Utenti;
 import java.io.Serializable;
 import javax.enterprise.context.SessionScoped;
@@ -18,6 +19,8 @@ public class SessionData implements Serializable{
     
     
     private Utenti utenteLogged;
+    
+    private Categorie categoriaScelta;
     
     /*private boolean logged = false;
 
