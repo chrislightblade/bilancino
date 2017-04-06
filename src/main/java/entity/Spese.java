@@ -42,7 +42,10 @@ import javax.persistence.TemporalType;
     @NamedQuery (name = Spese.FIND_ALL_BY_CATEGORY_AND_7GG , 
                  query = "SELECT c FROM Spese c WHERE c.categoria = :cat AND c.dataCreazione BETWEEN :dat2 AND :dat") ,
     @NamedQuery (name = Spese.FIND_ALL_BY_CATEGORY_AND_1_MESE , 
-                 query = "SELECT c FROM Spese c WHERE c.categoria = :cat AND c.dataCreazione BETWEEN :dat2 AND :dat")
+                 query = "SELECT c FROM Spese c WHERE c.categoria = :cat AND c.dataCreazione BETWEEN :dat2 AND :dat") ,
+    @NamedQuery(name = Spese.FIND_LAST_SPESA,
+            query = "select c from Spese c where  c.id="
+            + "(select MAX(e.id) from Spese e where e.utente = :ut)")
 })
 
 
@@ -60,6 +63,7 @@ public class Spese implements Serializable {
     public static final String FIND_ALL_BY_CATEGORY = "Spese.findByCategoria";
     public static final String FIND_ALL_BY_CATEGORY_AND_7GG = "Spese.findByCategoria&7Gg";
     public static final String FIND_ALL_BY_CATEGORY_AND_1_MESE = "Spese.findByCategoria&1Mese";
+    public static final String FIND_LAST_SPESA = "Spese.findLastSpesa";
     //public static final String FIND_ALL_SPESE_BY_USER = "Spese.findByUser";
     
     

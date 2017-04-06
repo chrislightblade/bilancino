@@ -22,6 +22,8 @@ public class SessionData implements Serializable{
     
     private Categorie categoriaScelta;
     
+    private String tempo;
+    
     /*private boolean logged = false;
 
     public boolean isLogged() {
@@ -46,6 +48,14 @@ public class SessionData implements Serializable{
 
     public void setCategoriaScelta(Categorie categoriaScelta) {
         this.categoriaScelta = categoriaScelta;
+    }
+
+    public String getTempo() {
+        return tempo;
+    }
+
+    public void setTempo(String tempo) {
+        this.tempo = tempo;
     }
     
     
